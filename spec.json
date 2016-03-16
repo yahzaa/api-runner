@@ -1,0 +1,70 @@
+{
+	"baseUri": "http://localhost:8000",
+	"endpoints": {
+		"/search_caption": {
+			"method": "GET",
+			"request": {
+				"contentType": "json",
+				"params": {
+					"query": {
+						"type": "string",
+						"required": true
+					}
+				}
+			},
+			"response": {
+				"contentType": "json",
+				"data": {
+					"pnum": {
+						"type": "integer",
+						"required": true
+					},
+					"dob": {
+						"type": "date",
+						"required": true
+					},
+					"caption": {
+						"type": "string",
+						"required": true
+					},
+					"ethnicity": {
+						"type": "integer",
+						"required": true
+					},
+					"weight": {
+						"type": "integer",
+						"required": true
+					},
+					"height": {
+						"type": "integer",
+						"required": true
+					},
+					"is_veg": {
+						"type": "boolean",
+						"required": true
+					},
+					"drink": {
+						"type": "boolean",
+						"required": true
+					}
+				}
+			}
+		},
+		"/count": {
+			"method": "GET",
+			"request": {
+				"contentType": "json",
+				"params": {}
+			},
+			"response": {
+				"contentType": "json",
+				"data": {
+					"count": {
+						"type": "integer",
+						"required": true
+					}
+				}
+			}
+		}
+	}
+}
